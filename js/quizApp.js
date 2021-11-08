@@ -55,10 +55,10 @@ async function handle_button_click(e) {
 
             // Change page container size to reveal scoreboard
             showScoreBoard();
-            document.querySelector("#elapsed_time_display").querySelector("span").innerHTML = 0;
+            document.querySelector("#elapsed_time_display").querySelector("span").innerHTML = `0 s`;
             timerInterval = setInterval(async()=>{
                 elapsed_time++;
-                document.querySelector("#elapsed_time_display").querySelector("span").innerHTML = `${elapsed_time}`;  
+                document.querySelector("#elapsed_time_display").querySelector("span").innerHTML = `${elapsed_time} s`;  
             },1000);
             update_counters(appState);
         }
@@ -159,10 +159,10 @@ async function handle_button_click(e) {
             update_view(appState);
             update_counters(appState);
 
-            document.querySelector("#elapsed_time_display").querySelector("span").innerHTML = elapsed_time = 0;
+            document.querySelector("#elapsed_time_display").querySelector("span").innerHTML = elapsed_time = `0 s`;
             timerInterval = setInterval(async()=>{
                 elapsed_time++;
-                document.querySelector("#elapsed_time_display").querySelector("span").innerHTML = `${elapsed_time}`;  
+                document.querySelector("#elapsed_time_display").querySelector("span").innerHTML = `${elapsed_time} s`;  
             },1000);
         }
         if (e.target.dataset.action == "return") {
